@@ -1,0 +1,228 @@
+{
+  "global": {
+    "siteName": "Alex Rivera",
+    "colors": {
+      "primary": "320 85% 55%",
+      "secondary": "270 60% 50%",
+      "background": "0 0% 98%",
+      "foreground": "0 0% 15%",
+      "colorScheme": "pink-purple"
+    },
+    "fonts": {
+      "display": "Cantora One",
+      "body": "Kreon",
+      "accent": "Meie Script"
+    },
+    "animations": {
+      "scrollSpeed": 1,
+      "fadeInDuration": 0.8,
+      "hoverScale": 1.05
+    }
+  },
+  "colorSchemes": {
+    "pink-purple": {
+      "primary": "320 85% 55%",
+      "secondary": "270 60% 50%",
+      "background": "0 0% 98%",
+      "foreground": "0 0% 15%"
+    },
+    "blue-cyan": {
+      "primary": "200 95% 50%",
+      "secondary": "180 85% 45%",
+      "background": "240 10% 96%",
+      "foreground": "240 20% 10%"
+    },
+    "orange-red": {
+      "primary": "30 95% 55%",
+      "secondary": "0 90% 55%",
+      "background": "0 0% 98%",
+      "foreground": "20 30% 10%"
+    },
+    "green-teal": {
+      "primary": "150 70% 45%",
+      "secondary": "170 80% 50%",
+      "background": "140 30% 97%",
+      "foreground": "140 20% 10%"
+    },
+    "purple-indigo": {
+      "primary": "270 80% 55%",
+      "secondary": "260 95% 50%",
+      "background": "270 20% 97%",
+      "foreground": "270 20% 10%"
+    }
+  },
+  "hero": {
+    "greeting": "HELLO,",
+    "name": "I'M ALEX",
+    "lastName": "RIVERA",
+    "label": "Creative Portfolio",
+    "description": "Content creator & social media strategist with 8+ years of experience turning brands into viral sensations.",
+    "image": "hero-portrait.jpg",
+    "buttons": [
+      {
+        "text": "View My Work",
+        "link": "work",
+        "style": "primary"
+      },
+      {
+        "text": "Get In Touch",
+        "link": "contact",
+        "style": "secondary"
+      }
+    ]
+  },
+  "about": {
+    "sectionLabel": "About Me",
+    "heading1": "CREATING CONTENT",
+    "heading2": "THAT CONVERTS",
+    "image": "about-image.jpg",
+    "paragraphs": [
+      "I specialize in creating scroll-stopping content for brands that want to dominate social media. From UGC videos to full brand campaigns, I bring a unique blend of creativity and data-driven strategy.",
+      "My work has been featured across major platforms, generating millions of views and driving real business results. I don't just create content — I build movements."
+    ],
+    "stats": [
+      {
+        "number": "500+",
+        "label": "Projects Completed"
+      },
+      {
+        "number": "50M+",
+        "label": "Views Generated"
+      },
+      {
+        "number": "120+",
+        "label": "Happy Clients"
+      },
+      {
+        "number": "5+",
+        "label": "Years Experience"
+      }
+    ]
+  },
+  "services": {
+    "sectionLabel": "Services & Pricing",
+    "heading": "WHAT I OFFER",
+    "items": [
+      {
+        "num": "01",
+        "title": "Short Videos",
+        "desc": "Scroll-stopping Reels, TikToks, and Shorts that drive engagement and virality.",
+        "price": "From $350"
+      },
+      {
+        "num": "02",
+        "title": "UGC Content",
+        "desc": "Authentic, relatable content that builds trust and converts viewers into customers.",
+        "price": "From $250"
+      },
+      {
+        "num": "03",
+        "title": "Brand Strategy",
+        "desc": "Full social media strategy including content calendar, audience growth, and analytics.",
+        "price": "From $1,500"
+      },
+      {
+        "num": "04",
+        "title": "Photo Content",
+        "desc": "High-quality product and lifestyle photography optimized for social media platforms.",
+        "price": "From $200"
+      }
+    ]
+  },
+  "work": {
+    "sectionLabel": "Selected Work",
+    "heading": "MY PORTFOLIO",
+    "description": "Swipe through my latest projects. Each one tells a unique story.",
+    "cta": "WANT MORE?",
+    "ctaButton": "Let's Talk",
+    "items": [
+      {
+        "title": "Brand Campaign",
+        "category": "Social Media",
+        "views": "2.5M Views",
+        "image": "portfolio-1.jpg"
+      },
+      {
+        "title": "Behind The Scenes",
+        "category": "Video Production",
+        "views": "1.8M Views",
+        "image": "portfolio-2.jpg"
+      },
+      {
+        "title": "Viral Reels",
+        "category": "Short Form Content",
+        "views": "8.2M Views",
+        "image": "portfolio-3.jpg"
+      },
+      {
+        "title": "Product Launch",
+        "category": "Brand Collaboration",
+        "views": "3.1M Views",
+        "image": "portfolio-4.jpg"
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Get In Touch",
+    "heading": "LET'S WORK",
+    "subheading": "TOGETHER",
+    "description": "I'm always open to new collaborations and exciting projects. Let's create something amazing together.",
+    "email": "hello@alexrivera.com",
+    "emailButtonText": "hello@alexrivera.com",
+    "socialLinks": [
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com"
+      },
+      {
+        "platform": "YouTube",
+        "url": "https://youtube.com"
+      },
+      {
+        "platform": "TikTok",
+        "url": "https://tiktok.com"
+      }
+    ],
+    "footerCopyright": "© 2026 Alex Rivera. All rights reserved.",
+    "footerBranding": "Creative Portfolio"
+  },
+  "navbar": {
+    "logo": "CREATIVE",
+    "buttons": [
+      "about",
+      "work",
+      "services",
+      "testimonials",
+      "contact"
+    ],
+    "ctaText": "Hire Me"
+  },
+  "marquee": {
+    "text1": "CONTENT CREATOR • SOCIAL MEDIA • BRAND STRATEGY • UGC EXPERT • VIDEO PRODUCTION • ",
+    "text2": "REELS • TIKTOK • YOUTUBE • INSTAGRAM • BRAND DEALS • VIRAL CONTENT • "
+  },
+  "textReveal": {
+    "text": "I don't just create content — I build viral movements that make brands unforgettable and turn followers into loyal customers."
+  },
+  "testimonials": {
+    "sectionLabel": "Testimonials",
+    "heading": "WHAT CLIENTS SAY",
+    "items": [
+      {
+        "quote": "Alex completely transformed our social media presence. Our engagement went up 400% in just 3 months.",
+        "name": "Sarah Chen",
+        "role": "Marketing Director, StyleCo"
+      },
+      {
+        "quote": "The viral video Alex created for our launch got 5M views. That's the kind of impact you can't put a price on.",
+        "name": "Marcus Johnson",
+        "role": "Founder, FitBrand"
+      },
+      {
+        "quote": "Working with Alex was a game-changer. Professional, creative, and delivers results every single time.",
+        "name": "Elena Rodriguez",
+        "role": "Brand Manager, LuxBeauty"
+      }
+    ]
+  }
+}

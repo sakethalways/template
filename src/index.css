@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Cantora+One&family=Kreon:wght@300;400;500;600;700&family=Meie+Script&family=Galindo&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 320 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 70%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 290 75% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 90%;
+    --ring: 320 85% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 15%;
+    --sidebar-primary: 320 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 60% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 85%;
+    --sidebar-ring: 320 85% 55%;
+
+    --font-display: 'Cantora One', serif;
+    --font-body: 'Kreon', serif;
+
+    --project-px: 1rem;
+    --project-py: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --project-px: 1.5rem;
+      --project-py: 4rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --project-px: 2rem;
+      --project-py: 5rem;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  .project-px {
+    padding-left: var(--project-px);
+    padding-right: var(--project-px);
+  }
+
+  .project-py {
+    padding-top: var(--project-py);
+    padding-bottom: var(--project-py);
+  }
+
+  .project-my {
+    margin-top: var(--project-py);
+    margin-bottom: var(--project-py);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+
+  .red-circle {
+    @apply rounded-full;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+  }
+
+  .section-divider {
+    @apply w-full h-px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
+  }
+
+  .glass-card {
+    @apply border border-border;
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(20px);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -15px hsl(var(--primary) / 0.3);
+  }
+
+  .magnetic-btn {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  .magnetic-btn::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(0 85% 40%));
+  }
+  .magnetic-btn:hover::before {
+    @apply opacity-100;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Accent font utilities */
+.font-accent-script {
+  font-family: 'Meie Script', cursive;
+}
+
+.font-accent-galindo {
+  font-family: 'Galindo', cursive;
+}
+
+.font-accent-changa {
+  font-family: 'Changa One', serif;
+}
