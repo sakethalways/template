@@ -61,11 +61,11 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="flex flex-col gap-8 md:gap-12">
-            <div className="text-center">
+            <div className="text-left">
               <p className="text-sm md:text-base tracking-[0.3em] uppercase text-primary font-body mb-4">
                 {content.about.sectionLabel}
               </p>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-start">
                 <SplitText
                   text={content.about.heading1}
                   animation="reveal"
@@ -81,7 +81,7 @@ const AboutSection = () => {
                 />
               </div>
             </div>
-            <div className="space-y-4 md:space-y-6 text-center">
+            <div className="space-y-4 md:space-y-6 text-left">
               {content.about.paragraphs.map((para, idx) => (
                 <SplitText
                   key={idx}

@@ -53,8 +53,8 @@ const WorkSection = () => {
   return (
     <section id="work" ref={sectionRef} className="py-32 px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col items-center justify-center mb-16">
-          <div className="text-center">
+        <div className="flex items-end justify-between mb-16">
+          <div>
             <p className="text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
               Selected Work
             </p>

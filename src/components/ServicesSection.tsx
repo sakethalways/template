@@ -50,7 +50,7 @@ const ServicesSection = () => {
   return (
     <section id="services" ref={sectionRef} className="project-px project-py -mt-8 md:-mt-12 lg:-mt-16">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-10 md:mb-16">
+        <div className="text-center lg:text-left mb-10 md:mb-16">
           <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
             {content.services.sectionLabel}
           </p>
