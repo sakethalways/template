@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["'Bebas Neue'", "cursive"],
-        body: ["'Space Grotesk'", "sans-serif"],
+        display: ["'Poppins'", "sans-serif"],
+        body: ["'Inter'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

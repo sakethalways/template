@@ -109,55 +109,58 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 w-screen z-50 px-1.5 sm:px-3 md:px-8 lg:px-10 py-1 sm:py-2 md:py-6 flex items-center justify-between transition-all duration-300 overflow-hidden bg-white"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between transition-all duration-300 overflow-hidden bg-white"
         style={{ 
           background: "linear-gradient(180deg, hsl(0 0% 98% / 0.98), hsl(0 0% 98% / 0.9), transparent)",
           transform: isHidden ? 'translateY(-100%)' : 'translateY(0)',
           opacity: isHidden ? 0 : 1,
         }}
       >
-        {/* Logo - Compact on mobile */}
-        <span ref={logoRef} className="text-[10px] sm:text-xs md:text-base lg:text-2xl tracking-wider text-foreground font-bold flex-shrink-0 whitespace-nowrap min-w-fit" style={{ perspective: "400px" }}>
-          {logoText.split("").map((l, i) => (
-            <span key={i} className="logo-letter inline-block">{l}</span>
-          ))}
-          <span className="text-primary logo-letter inline-block">.</span>
-        </span>
+        {/* Navbar Inner Container with max-width */}
+        <div className="flex items-center justify-between w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-2 md:py-4">
+          {/* Logo - Compact on mobile */}
+          <span ref={logoRef} className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl tracking-wider text-foreground font-bold flex-shrink-0 whitespace-nowrap min-w-fit" style={{ perspective: "400px" }}>
+            {logoText.split("").map((l, i) => (
+              <span key={i} className="logo-letter inline-block">{l}</span>
+            ))}
+            <span className="text-primary logo-letter inline-block">.</span>
+          </span>
 
-        {/* Spacer - flex grow to push buttons to right */}
-        <div className="flex-1 min-w-0" />
+          {/* Spacer - flex grow to push buttons to right */}
+          <div className="flex-1 min-w-0" />
 
-        {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8 font-body text-xs tracking-widest font-medium text-muted-foreground">
-          {navButtons.map((item: string) => (
+          {/* Desktop Links */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-10 font-body text-sm lg:text-base tracking-wide font-medium text-muted-foreground">
+            {navButtons.map((item: string) => (
+              <button
+                key={item}
+                onClick={() => scrollTo(item)}
+                className="nav-link-desktop hover:text-primary transition-colors duration-300 relative capitalize after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+
+          {/* Right Side Controls */}
+          <div className="flex items-center gap-0.5 sm:gap-1.5 md:gap-3 flex-shrink-0 ml-4 md:ml-8">
+            {/* Hire Me Button - Hidden on tiny mobile */}
             <button
-              key={item}
-              onClick={() => scrollTo(item)}
-              className="nav-link-desktop hover:text-primary transition-colors duration-300 relative capitalize after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap"
+              onClick={() => scrollTo("contact")}
+              className="nav-right-btn hidden xs:inline-block magnetic-btn bg-primary text-primary-foreground px-2 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 text-[8px] sm:text-[10px] md:text-sm font-body font-semibold tracking-wider uppercase relative z-10 whitespace-nowrap rounded transition-all hover:shadow-lg"
             >
-              {item}
+              <span className="relative z-10">{ctaText}</span>
             </button>
-          ))}
-        </div>
 
-        {/* Right Side Controls */}
-        <div className="flex items-center gap-0.5 sm:gap-1.5 md:gap-3 flex-shrink-0">
-          {/* Hire Me Button - Hidden on tiny mobile */}
-          <button
-            onClick={() => scrollTo("contact")}
-            className="nav-right-btn hidden xs:inline-block magnetic-btn bg-primary text-primary-foreground px-1.5 sm:px-4 md:px-6 py-1 sm:py-2 md:py-2.5 text-[7px] sm:text-[10px] md:text-sm font-body font-semibold tracking-wider uppercase relative z-10 whitespace-nowrap"
-          >
-            <span className="relative z-10">{ctaText}</span>
-          </button>
-
-          {/* Mobile Menu Toggle - Always visible and never hidden */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="nav-right-btn lg:hidden text-foreground p-1 flex-shrink-0 w-auto h-auto"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={16} className="sm:w-4 sm:h-4" /> : <Menu size={16} className="sm:w-4 sm:h-4" />}
-          </button>
+            {/* Mobile Menu Toggle - Always visible and never hidden */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="nav-right-btn lg:hidden text-foreground p-1 flex-shrink-0 w-auto h-auto"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={20} className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu size={20} className="w-5 h-5 sm:w-6 sm:h-6" />}
+            </button>
+          </div>
         </div>
       </nav>
 
