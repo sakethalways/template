@@ -58,7 +58,7 @@ const WorkSection = () => {
             <p className="text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
               Selected Work
             </p>
-            <h2 className="work-title font-display text-[clamp(2.5rem,5vw,5rem)] leading-[0.95] text-foreground">
+            <h2 className="work-title font-display text-[clamp(1.8rem,4vw,3.5rem)] leading-[0.95] text-foreground">
               MY <span className="text-gradient">PORTFOLIO</span>
             </h2>
           </div>
@@ -94,7 +94,7 @@ const WorkSection = () => {
                 <span className="text-primary font-body text-sm tracking-[0.2em] uppercase">
                   {work.category}
                 </span>
-                <h3 className="font-display text-3xl md:text-4xl text-foreground mt-1">
+                <h3 className="font-display text-xl md:text-2xl text-foreground mt-1">
                   {work.title}
                 </h3>
                 <span className="font-body text-muted-foreground text-sm mt-2">

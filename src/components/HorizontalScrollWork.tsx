@@ -36,9 +36,10 @@ const HorizontalScrollWork = () => {
       if (isDesktop) {
         const totalWidth = trackRef.current!.scrollWidth - window.innerWidth;
 
-        gsap.to(trackRef.current, {
+        const mainTween = gsap.to(trackRef.current, {
           x: -totalWidth,
           ease: "none",
+          id: "hscroll",
           scrollTrigger: {
             trigger: sectionRef.current,
             start: "top top",
@@ -62,7 +63,7 @@ const HorizontalScrollWork = () => {
               ease: "power2.out",
               scrollTrigger: {
                 trigger: card,
-                containerAnimation: gsap.getById?.("hscroll") || undefined,
+                containerAnimation: mainTween,
                 start: "left 80%",
                 end: "left 30%",
                 scrub: 1,
@@ -98,9 +99,9 @@ const HorizontalScrollWork = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="relative lg:overflow-hidden project-py -mt-8 md:-mt-12 lg:-mt-16">
+    <section id="work" ref={sectionRef} className="relative lg:overflow-hidden project-py -mt-8 md:-mt-12 lg:-mt-16 bg-background">
       {/* Header - relative on mobile, absolute on desktop */}
-      <div className="lg:absolute top-0 left-0 z-10 project-px pt-8 lg:pt-16 mb-8 lg:mb-0">
+      <div className="lg:absolute top-0 left-0 z-30 project-px pt-8 lg:pt-16 mb-8 lg:mb-0">
         <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary font-body mb-2">
           {content.work.sectionLabel}
         </p>
@@ -108,18 +109,18 @@ const HorizontalScrollWork = () => {
 
       <div
         ref={trackRef}
-        className="flex flex-col lg:flex-row lg:items-start lg:pt-[5vh] gap-10 lg:gap-5 project-px lg:h-screen w-full lg:w-max"
+        className="flex flex-col lg:flex-row lg:items-start lg:pt-[5vh] gap-10 lg:gap-12 project-px lg:h-screen w-full lg:w-max relative z-10"
       >
         {/* Title card */}
-        <div className="flex-shrink-0 w-full lg:w-[35vw] min-w-[300px] flex flex-col justify-center text-left">
-          <h2 className="font-display text-[clamp(2.5rem,8vw,7rem)] leading-[0.9] text-foreground">
+        <div className="flex-shrink-0 w-full lg:w-[50vw] min-w-[320px] flex flex-col justify-center text-left relative z-20 bg-background/50 backdrop-blur-sm pr-10">
+          <h2 className="font-display text-[clamp(2.5rem,8vw,7.5rem)] leading-[1.05] text-foreground tracking-tight">
             MY<br />
-            <span className="text-gradient">PORTFOLIO</span>
+            <span className="text-gradient whitespace-nowrap">PORTFOLIO</span>
           </h2>
           <SplitText
             text="Swipe through my latest projects. Each one tells a unique story."
             animation="blurFade"
-            className="font-body text-muted-foreground text-sm md:text-base mt-4 lg:mt-6 max-w-[280px]"
+            className="font-body text-muted-foreground text-sm md:text-base mt-4 lg:mt-6 max-w-[360px]"
             tag="p"
           />
         </div>
@@ -127,7 +128,7 @@ const HorizontalScrollWork = () => {
         {content.work.items.map((work, i) => (
           <div
             key={i}
-            className="hscroll-card flex-shrink-0 w-full lg:w-[32vw] max-w-[480px] group relative overflow-hidden cursor-pointer"
+            className="hscroll-card flex-shrink-0 w-full lg:w-[32vw] max-w-[480px] group relative overflow-hidden cursor-pointer z-10"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="aspect-[3/4] lg:max-h-[82vh] overflow-hidden relative rounded-xl lg:rounded-none">
