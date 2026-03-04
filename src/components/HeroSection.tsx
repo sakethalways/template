@@ -58,20 +58,20 @@ const HeroSection = () => {
       ref={sectionRef}
       className="relative min-h-[100svh] flex flex-col justify-start overflow-hidden project-px pt-24 md:pt-32 lg:pt-20"
     >
-      <div className="relative z-10 w-full max-w-[1440px] mx-auto">
+      <div className="relative z-10 w-full max-w-[2560px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center w-full">
           {/* Image Column - Order 2 on mobile, 2 on desktop */}
-          <div className="relative flex justify-center items-center h-[240px] md:h-[450px] lg:h-[600px] order-2 lg:order-2">
+          <div className="relative flex justify-center items-center h-[240px] md:h-[450px] lg:h-[600px] 2xl:h-[700px] order-2 lg:order-2 w-full">
             {/* Gradient Circle Background */}
             <div
               ref={circleRef}
-              className="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] red-circle opacity-30 rounded-full"
+              className="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] 2xl:w-[550px] 2xl:h-[550px] red-circle opacity-30 rounded-full"
             />
             
             {/* Image Inside Circle */}
             <div
               ref={imageRef}
-              className="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl z-10"
+              className="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] 2xl:w-[550px] 2xl:h-[550px] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl z-10"
               style={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',

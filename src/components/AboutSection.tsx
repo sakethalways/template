@@ -58,7 +58,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" ref={sectionRef} className="project-px project-py -mt-8 md:-mt-12 lg:-mt-16">
-      <div className="max-w-[1440px] mx-auto">
+      <div className="max-w-[2560px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="flex flex-col gap-8 md:gap-12">
             <div className="text-left">
