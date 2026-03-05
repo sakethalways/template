@@ -57,9 +57,9 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="project-px project-py -mt-8 md:-mt-12 lg:-mt-16">
-      <div className="max-w-[2560px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+    <section id="about" ref={sectionRef} className="project-py relative z-20 bg-background">
+      <div className="max-w-[1600px] mx-auto project-px">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
           <div className="flex flex-col gap-8 md:gap-12">
             <div className="text-left">
               <p className="text-sm md:text-base tracking-[0.3em] uppercase text-primary font-body mb-4">

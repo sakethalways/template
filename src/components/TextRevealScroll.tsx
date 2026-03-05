@@ -37,7 +37,7 @@ const TextRevealScroll = () => {
   const sentence = content?.textReveal?.text || "I don't just create content — I build viral movements that make brands unforgettable and turn followers into loyal customers.";
 
   return (
-    <section ref={sectionRef} className="project-px project-py -mt-8 md:-mt-12 lg:-mt-16">
+    <section ref={sectionRef} className="project-px project-py">
       <div className="max-w-5xl mx-auto">
         <p className="font-display text-[clamp(1.8rem,4vw,3.5rem)] leading-[1.3] text-foreground">
           {sentence.split(" ").map((word, i) => (

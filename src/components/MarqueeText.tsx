@@ -62,19 +62,15 @@ const MarqueeText = () => {
   }, []);
 
   return (
-    <div ref={marqueeRef} className="project-py overflow-hidden space-y-2 my-[5rem]">
+    <div ref={marqueeRef} className="py-8 md:py-12 lg:py-16 overflow-hidden space-y-2">
       <div ref={track1Ref} className="flex whitespace-nowrap">
-        <span className="font-display text-4xl md:text-6xl text-muted-foreground/70 tracking-wider">
-          {content?.marquee?.text1 || "CONTENT CREATOR • SOCIAL MEDIA • BRAND STRATEGY • UGC EXPERT • "}
-          {content?.marquee?.text1 || "CONTENT CREATOR • SOCIAL MEDIA • BRAND STRATEGY • UGC EXPERT • "}
-          {content?.marquee?.text1 || "CONTENT CREATOR • SOCIAL MEDIA • BRAND STRATEGY • UGC EXPERT • "}
+        <span className="font-display text-4xl md:text-6xl lg:text-8xl text-muted-foreground/70 tracking-wider">
+          {Array(6).fill(content?.marquee?.text1 || "CONTENT CREATOR • SOCIAL MEDIA • BRAND STRATEGY • UGC EXPERT • ").join("")}
         </span>
       </div>
       <div ref={track2Ref} className="flex whitespace-nowrap">
-        <span className="font-display text-4xl md:text-6xl text-primary/60 tracking-wider">
-          {content?.marquee?.text2 || "REELS • TIKTOK • YOUTUBE • INSTAGRAM • BRAND DEALS • "}
-          {content?.marquee?.text2 || "REELS • TIKTOK • YOUTUBE • INSTAGRAM • BRAND DEALS • "}
-          {content?.marquee?.text2 || "REELS • TIKTOK • YOUTUBE • INSTAGRAM • BRAND DEALS • "}
+        <span className="font-display text-4xl md:text-6xl lg:text-8xl text-primary/60 tracking-wider">
+          {Array(6).fill(content?.marquee?.text2 || "REELS • TIKTOK • YOUTUBE • INSTAGRAM • BRAND DEALS • ").join("")}
         </span>
       </div>
     </div>

@@ -48,8 +48,8 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="project-px project-py -mt-8 md:-mt-12 lg:-mt-16">
-      <div className="max-w-[2560px] mx-auto">
+    <section id="services" ref={sectionRef} className="project-py bg-background/50">
+      <div className="max-w-[1600px] mx-auto project-px">
         <div className="text-center lg:text-left mb-10 md:mb-16">
           <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
             {content.services.sectionLabel}

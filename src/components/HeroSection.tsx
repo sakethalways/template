@@ -56,22 +56,22 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[100svh] flex flex-col justify-start overflow-hidden project-px pt-24 md:pt-32 lg:pt-20"
+      className="relative min-h-[90svh] lg:min-h-[100svh] flex flex-col justify-center overflow-hidden pt-20 md:pt-24 lg:pt-0"
     >
-      <div className="relative z-10 w-full max-w-[2560px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start lg:items-center w-full">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto project-px">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center w-full">
           {/* Image Column - Order 2 on mobile, 2 on desktop */}
-          <div className="relative flex justify-center items-center h-[240px] md:h-[450px] lg:h-[600px] 2xl:h-[700px] order-2 lg:order-2 w-full">
+          <div className="relative flex justify-center items-center h-[300px] md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[750px] order-2 lg:order-2 w-full">
             {/* Gradient Circle Background */}
             <div
               ref={circleRef}
-              className="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] 2xl:w-[550px] 2xl:h-[550px] red-circle opacity-30 rounded-full"
+              className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px] [@media(min-width:1920px)]:w-[750px] [@media(min-width:1920px)]:h-[750px] red-circle opacity-30 rounded-full"
             />
             
             {/* Image Inside Circle */}
             <div
               ref={imageRef}
-              className="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] 2xl:w-[550px] 2xl:h-[550px] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl z-10"
+              className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px] [@media(min-width:1920px)]:w-[750px] [@media(min-width:1920px)]:h-[750px] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl z-10"
               style={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',

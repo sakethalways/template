@@ -99,28 +99,30 @@ const HorizontalScrollWork = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="relative lg:overflow-hidden project-py -mt-8 md:-mt-12 lg:-mt-16 bg-background">
+    <section id="work" ref={sectionRef} className="relative lg:overflow-hidden project-py bg-background">
       {/* Header - relative on mobile, absolute on desktop */}
-      <div className="lg:absolute top-0 left-0 z-30 project-px pt-8 lg:pt-16 mb-8 lg:mb-0">
-        <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary font-body mb-2">
-          {content.work.sectionLabel}
-        </p>
+      <div className="lg:absolute top-0 left-0 z-30 w-full">
+        <div className="max-w-[1600px] mx-auto project-px pt-8 lg:pt-16 mb-8 lg:mb-0">
+          <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary font-body mb-2">
+            {content.work.sectionLabel}
+          </p>
+        </div>
       </div>
 
       <div
         ref={trackRef}
-        className="flex flex-col lg:flex-row lg:items-start lg:pt-[5vh] gap-10 lg:gap-12 project-px lg:h-screen w-full lg:w-max relative z-10"
+        className="flex flex-col lg:flex-row lg:items-start lg:pt-[5vh] gap-10 lg:gap-24 lg:h-screen w-full lg:w-max relative z-10"
       >
-        {/* Title card */}
-        <div className="flex-shrink-0 w-full lg:w-[50vw] min-w-[320px] flex flex-col justify-center text-left relative z-20 bg-background/50 backdrop-blur-sm pr-10">
-          <h2 className="font-display text-[clamp(2.5rem,8vw,7.5rem)] leading-[1.05] text-foreground tracking-tight">
+        {/* Title card - extra left padding to align with max-w container */}
+        <div className="flex-shrink-0 w-full lg:w-[55vw] xl:w-[50vw] max-w-[1200px] flex flex-col justify-center text-left relative z-20 bg-background/50 backdrop-blur-sm pr-10 project-px lg:pl-[max(var(--project-px),calc((100vw-1600px)/2+var(--project-px)))]">
+          <h2 className="font-display text-[clamp(2.5rem,8vw,8rem)] leading-[1.05] text-foreground tracking-tight">
             MY<br />
             <span className="text-gradient whitespace-nowrap">PORTFOLIO</span>
           </h2>
           <SplitText
             text="Swipe through my latest projects. Each one tells a unique story."
             animation="blurFade"
-            className="font-body text-muted-foreground text-sm md:text-base mt-4 lg:mt-6 max-w-[360px]"
+            className="font-body text-muted-foreground text-sm md:text-base lg:text-xl mt-4 lg:mt-8 max-w-[500px]"
             tag="p"
           />
         </div>
@@ -128,7 +130,7 @@ const HorizontalScrollWork = () => {
         {content.work.items.map((work, i) => (
           <div
             key={i}
-            className="hscroll-card flex-shrink-0 w-full lg:w-[32vw] max-w-[480px] group relative overflow-hidden cursor-pointer z-10"
+            className="hscroll-card flex-shrink-0 w-full lg:w-[35vw] xl:w-[30vw] 2xl:w-[25vw] max-w-[650px] group relative overflow-hidden cursor-pointer z-10"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div className="aspect-[3/4] lg:max-h-[82vh] overflow-hidden relative rounded-xl lg:rounded-none">

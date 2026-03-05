@@ -117,7 +117,7 @@ const Navbar = () => {
         }}
       >
         {/* Navbar Inner Container with max-width */}
-        <div className="flex items-center justify-between w-full max-w-[2560px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-2 md:py-4">
+        <div className="flex items-center justify-between w-full max-w-[1600px] mx-auto project-px py-2 md:py-4">
           {/* Logo - Compact on mobile */}
           <span ref={logoRef} className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl tracking-wider text-foreground font-bold flex-shrink-0 whitespace-nowrap min-w-fit" style={{ perspective: "400px" }}>
             {logoText.split("").map((l, i) => (
