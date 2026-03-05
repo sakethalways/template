@@ -65,7 +65,7 @@ const HeroSection = () => {
             {/* Gradient Circle Background */}
             <div
               ref={circleRef}
-              className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px] [@media(min-width:1920px)]:w-[750px] [@media(min-width:1920px)]:h-[750px] red-circle opacity-30 rounded-full"
+              className="absolute w-[200px] h-[200px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] xl:w-[400px] xl:h-[400px] 2xl:w-[480px] 2xl:h-[480px] [@media(min-width:1920px)]:w-[600px] [@media(min-width:1920px)]:h-[600px] red-circle opacity-30 rounded-full"
             />
             
             {/* Image Inside Circle */}
