@@ -66,15 +66,15 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="project-py relative z-20 bg-background w-full max-w-full overflow-x-hidden">
-      <div className="max-w-[1600px] mx-auto project-px w-full overflow-x-hidden">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center w-full">
-          <div className="flex flex-col gap-8 md:gap-12">
-            <div className="text-left">
+    <section id="about" ref={sectionRef} className="project-py relative z-20 bg-background w-full max-w-full overflow-hidden">
+      <div className="max-w-[1600px] mx-auto project-px w-full overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-start lg:items-center w-full overflow-hidden">
+          <div className="flex flex-col gap-8 md:gap-12 w-full overflow-hidden">
+            <div className="text-left overflow-hidden">
               <p className="text-sm md:text-base tracking-[0.3em] uppercase text-primary font-body mb-4">
                 {content.about.sectionLabel}
               </p>
-              <div className="flex flex-col items-start">
+              <div className="flex flex-col items-start overflow-hidden">
                 <SplitText
                   text={content.about.heading1}
                   animation="reveal"
@@ -105,7 +105,7 @@ const AboutSection = () => {
           </div>
 
           {/* About Image */}
-          <div className="relative h-96 md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden">
+          <div className="relative h-80 md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden w-full">
             <img
               src={getAssetPath(content.about.image)}
               alt="About section"
@@ -119,7 +119,7 @@ const AboutSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-20 pt-10 md:pt-16 border-t border-border" style={{ perspective: "600px" }}>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-12 md:mt-20 pt-10 md:pt-16 border-t border-border overflow-hidden" style={{ perspective: "600px" }}>
           {content.about.stats.map((stat) => {
             const numericPart = parseInt(stat.number.replace(/\D/g, ""));
             const suffix = stat.number.replace(/\d/g, "");

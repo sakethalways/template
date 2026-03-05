@@ -61,17 +61,17 @@ const HeroSection = () => {
       <div className="relative z-10 w-full max-w-[1600px] mx-auto project-px overflow-x-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center w-full">
           {/* Image Column - Order 2 on mobile, 2 on desktop */}
-          <div className="relative flex justify-center items-center h-[300px] md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[750px] order-2 lg:order-2 w-full overflow-hidden">
+          <div className="relative flex justify-center items-center h-[250px] md:h-[350px] lg:h-[550px] xl:h-[650px] 2xl:h-[750px] order-2 lg:order-2 w-full overflow-hidden">
             {/* Gradient Circle Background */}
             <div
               ref={circleRef}
-              className="absolute w-[200px] h-[200px] md:w-[280px] md:h-[280px] lg:w-[320px] lg:h-[320px] xl:w-[400px] xl:h-[400px] 2xl:w-[480px] 2xl:h-[480px] [@media(min-width:1920px)]:w-[600px] [@media(min-width:1920px)]:h-[600px] red-circle opacity-30 rounded-full"
+              className="absolute w-[160px] h-[160px] md:w-[220px] md:h-[220px] lg:w-[320px] lg:h-[320px] xl:w-[400px] xl:h-[400px] 2xl:w-[480px] 2xl:h-[480px] [@media(min-width:1920px)]:w-[600px] [@media(min-width:1920px)]:h-[600px] red-circle opacity-30 rounded-full"
             />
             
             {/* Image Inside Circle */}
             <div
               ref={imageRef}
-              className="absolute w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px] [@media(min-width:1920px)]:w-[750px] [@media(min-width:1920px)]:h-[750px] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl z-10"
+              className="absolute w-[200px] h-[200px] md:w-[270px] md:h-[270px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px] [@media(min-width:1920px)]:w-[750px] [@media(min-width:1920px)]:h-[750px] rounded-full overflow-hidden border-2 border-primary/20 shadow-2xl z-10"
               style={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
