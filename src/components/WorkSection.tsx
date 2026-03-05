@@ -53,18 +53,18 @@ const WorkSection = () => {
   return (
     <section id="work" ref={sectionRef} className="py-20 md:py-32 px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
       <div className="max-w-[2560px] mx-auto">
-        <div className="flex items-end justify-between mb-16">
+        <div className="flex items-end justify-between mb-20 md:mb-28 lg:mb-32 relative z-10">
           <div>
             <p className="text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
               Selected Work
             </p>
-            <h2 className="work-title font-display text-[clamp(1.8rem,4vw,3.5rem)] leading-[0.95] text-foreground">
+            <h2 className="work-title font-display text-[clamp(1.8rem,4vw,3.5rem)] leading-[0.95] text-foreground whitespace-nowrap">
               MY <span className="text-gradient">PORTFOLIO</span>
             </h2>
           </div>
         </div>
 
-        <div className="work-grid grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="work-grid grid grid-cols-1 md:grid-cols-2 gap-6 relative z-0">
           {works.map((work, i) => (
             <div
               key={i}
