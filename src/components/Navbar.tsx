@@ -109,15 +109,15 @@ const Navbar = () => {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between transition-all duration-300 overflow-hidden bg-white"
+        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center transition-all duration-300 overflow-hidden bg-white"
         style={{ 
           background: "linear-gradient(180deg, hsl(0 0% 98% / 0.98), hsl(0 0% 98% / 0.9), transparent)",
           transform: isHidden ? 'translateY(-100%)' : 'translateY(0)',
           opacity: isHidden ? 0 : 1,
         }}
       >
-        {/* Navbar Inner Container with max-width */}
-        <div className="flex items-center justify-between w-full max-w-[1600px] mx-auto project-px py-2 md:py-4">
+        {/* Navbar Inner Container - Full width with max constraint */}
+        <div className="flex items-center justify-between w-full max-w-[1600px] project-px py-2 md:py-4 px-0">
           {/* Logo - Compact on mobile */}
           <span ref={logoRef} className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-3xl tracking-wider text-foreground font-bold flex-shrink-0 whitespace-nowrap min-w-fit" style={{ perspective: "400px" }}>
             {logoText.split("").map((l, i) => (

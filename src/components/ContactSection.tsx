@@ -61,8 +61,8 @@ const ContactSection = () => {
   }, []);
 
   return (
-    <section id="contact" ref={sectionRef} className="project-py bg-background">
-      <div className="max-w-[1600px] mx-auto project-px">
+    <section id="contact" ref={sectionRef} className="project-py bg-background w-full max-w-full overflow-x-hidden">
+      <div className="max-w-[1600px] mx-auto project-px w-full overflow-x-hidden">
         <div className="text-center">
           <p className="text-xs md:text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
             {content.contact.sectionLabel}

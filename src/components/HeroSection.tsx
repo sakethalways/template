@@ -56,12 +56,12 @@ const HeroSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[90svh] lg:min-h-[100svh] flex flex-col justify-center overflow-hidden pt-20 md:pt-24 lg:pt-0"
+      className="relative min-h-[90svh] lg:min-h-[100svh] flex flex-col justify-center overflow-hidden pt-20 md:pt-24 lg:pt-0 w-full max-w-full"
     >
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto project-px">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto project-px overflow-x-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center w-full">
           {/* Image Column - Order 2 on mobile, 2 on desktop */}
-          <div className="relative flex justify-center items-center h-[300px] md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[750px] order-2 lg:order-2 w-full">
+          <div className="relative flex justify-center items-center h-[300px] md:h-[450px] lg:h-[550px] xl:h-[650px] 2xl:h-[750px] order-2 lg:order-2 w-full overflow-hidden">
             {/* Gradient Circle Background */}
             <div
               ref={circleRef}

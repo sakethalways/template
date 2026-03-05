@@ -66,9 +66,9 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section id="about" ref={sectionRef} className="project-py relative z-20 bg-background">
-      <div className="max-w-[1600px] mx-auto project-px">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
+    <section id="about" ref={sectionRef} className="project-py relative z-20 bg-background w-full max-w-full overflow-x-hidden">
+      <div className="max-w-[1600px] mx-auto project-px w-full overflow-x-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center w-full">
           <div className="flex flex-col gap-8 md:gap-12">
             <div className="text-left">
               <p className="text-sm md:text-base tracking-[0.3em] uppercase text-primary font-body mb-4">

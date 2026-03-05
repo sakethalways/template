@@ -51,9 +51,9 @@ const WorkSection = () => {
   }, []);
 
   return (
-    <section id="work" ref={sectionRef} className="py-20 md:py-32 px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16">
-      <div className="max-w-[2560px] mx-auto">
-        <div className="flex items-end justify-between mb-20 md:mb-28 lg:mb-32 relative z-10">
+    <section id="work" ref={sectionRef} className="py-20 md:py-32 px-4 md:px-6 lg:px-8 xl:px-12 2xl:px-16 w-full max-w-full overflow-x-hidden">
+      <div className="max-w-[2560px] mx-auto w-full overflow-x-hidden">
+        <div className="flex items-end justify-between mb-20 md:mb-28 lg:mb-32 relative z-10 w-full overflow-x-hidden">
           <div>
             <p className="text-sm tracking-[0.3em] uppercase text-primary font-body mb-4">
               Selected Work
