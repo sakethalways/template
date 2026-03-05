@@ -6,6 +6,15 @@ import { useContent } from "@/context/ContentContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Helper to get image path
+const getAssetPath = (path: string) => {
+  if (!path) return new URL(`../assets/hero-portrait.jpg`, import.meta.url).href;
+  if (path.startsWith("http") || path.startsWith("data:")) return path;
+  // If it's just a filename, assume it's in assets
+  const filename = path.split("/").pop();
+  return new URL(`../assets/${filename}`, import.meta.url).href;
+};
+
 const AboutSection = () => {
   const { content } = useContent();
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -96,15 +105,17 @@ const AboutSection = () => {
           </div>
 
           {/* About Image */}
-          {content.about.image && (
-            <div className="relative h-96 md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden">
-              <img
-                src={content.about.image}
-                alt="About section"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            </div>
-          )}
+          <div className="relative h-96 md:h-[500px] lg:h-[550px] rounded-lg overflow-hidden">
+            <img
+              src={getAssetPath(content.about.image)}
+              alt="About section"
+              className="w-full h-full object-cover rounded-lg"
+              onError={(e) => {
+                // Fallback to hero-portrait if the image fails to load
+                (e.target as HTMLImageElement).src = getAssetPath("");
+              }}
+            />
+          </div>
         </div>
 
         {/* Stats */}
